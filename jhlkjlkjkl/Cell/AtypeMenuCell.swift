@@ -15,7 +15,9 @@ class AtypeMenuCell: UITableViewCell {
     var tapHandler: ((UIButton) -> Void)?
 
     
-    @IBOutlet weak var button01: UIButton!
+    @IBOutlet weak var button01: IconButton!
+
+    @IBOutlet weak var label1: UILabel!
     
     @IBAction func tapped(_ sender: UIButton) {
         tapHandler?(sender)
@@ -27,11 +29,16 @@ class AtypeMenuCell: UITableViewCell {
         // Initialization code
         
         
-        button01.layer.cornerRadius = button01.frame.width/2
         button01.setImage(UIImage(systemName: "tray.fill" ), for: .highlighted)
         button01.setImage(UIImage(systemName: "tray"), for: .normal)
-        button01.tintColor = .black
-        button01.backgroundColor = .lightGray
+
+
+        
+        label1.layer.shadowColor = UIColor.black.cgColor
+        label1.layer.shadowRadius = 3.0
+        label1.layer.shadowOpacity = 1.0
+        label1.layer.shadowOffset = CGSize(width: 2, height: 2)
+        label1.layer.masksToBounds = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

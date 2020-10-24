@@ -3,7 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,10 +19,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="368" height="144"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연계 데이터" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sct-o2-bgz">
-                        <rect key="frame" x="145" y="115" width="78" height="19"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연계 데이터" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sct-o2-bgz">
+                        <rect key="frame" x="143" y="115" width="82" height="19"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okZ-PH-RQY" customClass="IconButton" customModule="jhlkjlkjkl" customModuleProvider="target">
@@ -31,7 +32,10 @@
                             <constraint firstAttribute="width" constant="100" id="2JZ-tr-XdP"/>
                             <constraint firstAttribute="height" constant="100" id="Nbj-ie-KAt"/>
                         </constraints>
-                        <state key="normal" image="tray.fill" catalog="system"/>
+                        <color key="tintColor" red="1" green="0.8272816569" blue="0.27493653210000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal">
+                            <imageReference key="image" image="tray.fill" catalog="system" renderingMode="template"/>
+                        </state>
                         <connections>
                             <action selector="tapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Y0L-on-fmO"/>
                         </connections>
@@ -41,20 +45,20 @@
                     <constraint firstItem="Sct-o2-bgz" firstAttribute="centerX" secondItem="okZ-PH-RQY" secondAttribute="centerX" id="bBC-Mj-b99"/>
                     <constraint firstItem="okZ-PH-RQY" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="blG-e7-qfk"/>
                     <constraint firstItem="Sct-o2-bgz" firstAttribute="top" secondItem="okZ-PH-RQY" secondAttribute="bottom" constant="5" id="drj-qP-MMm"/>
-                    <constraint firstAttribute="bottom" secondItem="Sct-o2-bgz" secondAttribute="bottom" constant="10" id="sHm-4k-ZdG"/>
                     <constraint firstItem="okZ-PH-RQY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="y5X-2b-Kxt"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="button01" destination="okZ-PH-RQY" id="01Z-jD-r0b"/>
+                <outlet property="label1" destination="Sct-o2-bgz" id="9ae-UQ-R43"/>
             </connections>
             <point key="canvasLocation" x="175.36231884057972" y="131.25"/>
         </tableViewCell>
     </objects>
     <designables>
         <designable name="okZ-PH-RQY">
-            <size key="intrinsicContentSize" width="24" height="22"/>
+            <size key="intrinsicContentSize" width="70" height="49"/>
         </designable>
     </designables>
     <resources>

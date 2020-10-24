@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
 
 
 
@@ -26,119 +26,119 @@ struct User: Codable {
 
 
 class FirstViewController: UIViewController {
-    
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-    let totalCount = 132
-    
-    
-    var ref: DatabaseReference!
-    
-    
-    
-    @IBAction func add(_ sender: UIButton) {
-        addData()
-    }
-    
-    
-    func addData(){
-        
-        guard let key = ref.child("mulitple").childByAutoId().key else { return }
-//        let post = ["uid": userID,
-//                    "author": username,
-//                    "title": title,
-//                    "body": body]
-//        let childUpdates = ["/posts/\(key)": post,
-//                            "/user-posts/\(userID)/\(key)/": post]
-        
-        let data0 = ["contents":["ddd4dd":[1,2,3],
-                                 "dd5ddv":[45,6,7],
-                                 "ddd6db":["vv":"ddd"],
-                                 "ddd7dh":[4,6,7],
-        ]
-        ]
-                   
-        let data55 : [String:[Int]] = [
-            "numbers":[1,2,3,4,5]
-        ]
-        
-//        [String : [User]]
-//        [String:[Int]]
-        
-        let data1 = [
-            "소프트웨어 아키텍쳐 4+1뷰":"vvvv",
-            "자료분석 산출물의 종류1":"현*기*인*아*소*하*네",
-            "자료분석 산출물의 종류2":"현*기*인*아*소*하*네",
-            "자료분석 산출물의 종류3":"현*기*인*아*소*하*네"
-        ]
-        
-        print(data1)
-        
-        let data2 = [
-            "소프트웨어33 아키텍쳐 4+1뷰":"vvvv",
-            "자료분석 산출55물의 종류1":"현*기*인*아*소*하*네",
-            "자료분석 산출물66의 종류2":"현*기*인*아*소*하*네",
-            "자료분석 산출물의 77종류3":"현*기*인*아*소*하*네"
-        ]
-        
-        //        self.ref.child("mulitple").setValue(data)
-        
-        [data0].forEach { vv in
-            ref.updateChildValues(vv) { (error, ref) in
-                print(error?.localizedDescription)
-            }
-        }
-        
-       
 
-        
-        
-//        self.ref.child("mulitple").setValue(data2) { (error, ref) in
-//            print(error?.localizedDescription)
-//            print(ref,"ref")
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+    let totalCount = 132
+
+
+//    var ref: DatabaseReference!
+
+    
+
+    @IBAction func add(_ sender: UIButton) {
+//        addData()
+    }
+
+
+//    func addData(){
+//
+//        guard let key = ref.child("mulitple").childByAutoId().key else { return }
+////        let post = ["uid": userID,
+////                    "author": username,
+////                    "title": title,
+////                    "body": body]
+////        let childUpdates = ["/posts/\(key)": post,
+////                            "/user-posts/\(userID)/\(key)/": post]
+//
+//        let data0 = ["contents":["ddd4dd":[1,2,3],
+//                                 "dd5ddv":[45,6,7],
+//                                 "ddd6db":["vv":"ddd"],
+//                                 "ddd7dh":[4,6,7],
+//        ]
+//        ]
+//
+//        let data55 : [String:[Int]] = [
+//            "numbers":[1,2,3,4,5]
+//        ]
+//
+////        [String : [User]]
+////        [String:[Int]]
+//
+//        let data1 = [
+//            "소프트웨어 아키텍쳐 4+1뷰":"vvvv",
+//            "자료분석 산출물의 종류1":"현*기*인*아*소*하*네",
+//            "자료분석 산출물의 종류2":"현*기*인*아*소*하*네",
+//            "자료분석 산출물의 종류3":"현*기*인*아*소*하*네"
+//        ]
+//
+//        print(data1)
+//
+//        let data2 = [
+//            "소프트웨어33 아키텍쳐 4+1뷰":"vvvv",
+//            "자료분석 산출55물의 종류1":"현*기*인*아*소*하*네",
+//            "자료분석 산출물66의 종류2":"현*기*인*아*소*하*네",
+//            "자료분석 산출물의 77종류3":"현*기*인*아*소*하*네"
+//        ]
+//
+//        //        self.ref.child("mulitple").setValue(data)
+//
+//        [data0].forEach { vv in
+//            ref.updateChildValues(vv) { (error, ref) in
+//                print(error?.localizedDescription)
+//            }
 //        }
-        
-    }
-    
-    
-    func readData(){
-        
-        ref.child("mulitple").observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let dictionary = snapshot.value as? NSDictionary else {return}
-            
-            do{
-                let data = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
-                let reward = try JSONDecoder().decode([User].self, from: data)
-                print(reward, "users")
-            }catch{
-                print(error.localizedDescription)
-            }
-            
-        }) { (error) in
-            print(error.localizedDescription)
-        }
-        
-    }
-    
-    
-    
+//
+//
+//
+//
+//
+////        self.ref.child("mulitple").setValue(data2) { (error, ref) in
+////            print(error?.localizedDescription)
+////            print(ref,"ref")
+////        }
+//
+//    }
+
+
+//    func readData(){
+//
+//        ref.child("mulitple").observeSingleEvent(of: .value, with: { (snapshot) in
+//            guard let dictionary = snapshot.value as? NSDictionary else {return}
+//
+//            do{
+//                let data = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
+//                let reward = try JSONDecoder().decode([User].self, from: data)
+//                print(reward, "users")
+//            }catch{
+//                print(error.localizedDescription)
+//            }
+//
+//        }) { (error) in
+//            print(error.localizedDescription)
+//        }
+//
+//    }
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        ref = Database.database().reference()
-        
-        readData()
+
+//        ref = Database.database().reference()
+//
+//        readData()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         setUp()
         tableView.reloadData()
     }
-    
-    
+
+
     private func reloadData(){
         appDelegate.tupleDict.removeValue(forKey: appDelegate.tupleDict.keys.first ?? "")
-        
+
         if appDelegate.tupleDict.count == 0 {
             appDelegate.tupleDict = [
                 "소프트웨어 아키텍쳐 4+1뷰":("유*논*프*구*배","유스케이스뷰*논리뷰*프로세스뷰*구현뷰*배포뷰"),
@@ -275,19 +275,19 @@ class FirstViewController: UIViewController {
                 "소프트웨어 버전관리도구 유형":("공*클*분","공유폴더방식*클라이언트/서버방식*분산저장소방식")
             ]
         }
-        
+
         numbersLabel.text = "\(appDelegate.tupleDict.count)" + "/" + "\(totalCount)"
         answersLabel.text = appDelegate.tupleDict.keys.first ?? ""
         tableView.reloadData()
     }
-    
-    
+
+
     @objc private func handleTap(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             reloadData()
         }
     }
-    
+
     private func setUp(){
         numbersLabel.text = "\(appDelegate.tupleDict.count)" + "/" + "\(totalCount)"
         answersLabel.text = appDelegate.tupleDict.keys.first
@@ -298,41 +298,41 @@ class FirstViewController: UIViewController {
         tableView.backgroundColor = appDelegate.baseColor
         tableView.bounces = false
     }
-    
-    
+
+
     @IBOutlet weak var numbersLabel: UILabel!
     @IBOutlet weak var answersLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
+
 }
 
 
 extension FirstViewController : UITableViewDelegate, UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 20))
         view.backgroundColor = appDelegate.baseColor
         return view
     }
-    
+
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 20))
         view.backgroundColor = appDelegate.baseColor
         return view
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let str = appDelegate.tupleDict[appDelegate.tupleDict.keys.first ?? ""]?.0 else {
             return 0
         }
         return str.components(separatedBy: "*").count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let strOne = appDelegate.tupleDict[appDelegate.tupleDict.keys.first ?? ""]?.0 else {
             return UITableViewCell()
         }
-        
+
         let cell = tableView.dequeueReusableCell(withIdentifier: SecondCell.identifier, for: indexPath) as! SecondCell
         cell.selectionStyle = .none
         let highlight = strOne.components(separatedBy: "*")[indexPath.row]
@@ -340,13 +340,13 @@ extension FirstViewController : UITableViewDelegate, UITableViewDataSource {
         cell.answersLabel.backgroundColor = appDelegate.baseColor
         cell.answersLabel.textColor = appDelegate.highlightColor
         cell.answersLabel.text = highlight
-        
+
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         reloadData()
     }
-    
+
 }
 

@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -36,29 +36,29 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuH-GY-jlI" customClass="IconButton" customModule="jhlkjlkjkl" customModuleProvider="target">
                         <rect key="frame" x="202" y="10" width="100" height="100"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="1KC-oD-gU6"/>
                             <constraint firstAttribute="height" constant="100" id="6eU-Vr-wvl"/>
                         </constraints>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.99831159059999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <state key="normal">
-                            <imageReference key="image" image="briefcase.fill" catalog="system" renderingMode="original"/>
+                            <imageReference key="image" image="briefcase.fill" catalog="system" renderingMode="template"/>
                         </state>
                         <connections>
                             <action selector="tapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Dp8-mH-EXt"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로토콜 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lf8-YT-Ya0">
-                        <rect key="frame" x="76.5" y="115" width="63.5" height="36"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로토콜 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lf8-YT-Ya0">
+                        <rect key="frame" x="74.5" y="115" width="67" height="36"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약술형 단답형" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXh-RE-7CA">
-                        <rect key="frame" x="205.5" y="115" width="93" height="36"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약술형 단답형" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXh-RE-7CA">
+                        <rect key="frame" x="203" y="115" width="98" height="36"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -66,10 +66,8 @@
                     <constraint firstItem="1W6-23-6Hw" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.6" id="0Fh-ld-Alg"/>
                     <constraint firstItem="Lf8-YT-Ya0" firstAttribute="top" secondItem="1W6-23-6Hw" secondAttribute="bottom" constant="5" id="7ZK-aY-esQ"/>
                     <constraint firstItem="VXh-RE-7CA" firstAttribute="top" secondItem="JuH-GY-jlI" secondAttribute="bottom" constant="5" id="CEQ-WV-WhB"/>
-                    <constraint firstAttribute="bottom" secondItem="Lf8-YT-Ya0" secondAttribute="bottom" constant="10" id="FDO-oV-DKr"/>
                     <constraint firstItem="VXh-RE-7CA" firstAttribute="centerX" secondItem="JuH-GY-jlI" secondAttribute="centerX" id="O1f-Ut-Rwk"/>
                     <constraint firstItem="Lf8-YT-Ya0" firstAttribute="centerX" secondItem="1W6-23-6Hw" secondAttribute="centerX" id="O4p-aY-iKq"/>
-                    <constraint firstAttribute="bottom" secondItem="VXh-RE-7CA" secondAttribute="bottom" constant="10" id="TLj-GP-9jU"/>
                     <constraint firstItem="JuH-GY-jlI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="llq-6A-2Hi"/>
                     <constraint firstItem="JuH-GY-jlI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.4" id="y1o-2N-rVF"/>
                     <constraint firstItem="1W6-23-6Hw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="yOP-0X-tDu"/>
@@ -79,23 +77,25 @@
             <connections>
                 <outlet property="button01" destination="1W6-23-6Hw" id="RB3-35-P4a"/>
                 <outlet property="button02" destination="JuH-GY-jlI" id="HOP-2g-6d8"/>
+                <outlet property="label1" destination="Lf8-YT-Ya0" id="IDz-Ni-DV4"/>
+                <outlet property="label2" destination="VXh-RE-7CA" id="0Oh-pu-bAU"/>
             </connections>
             <point key="canvasLocation" x="162.31884057971016" y="151.00446428571428"/>
         </tableViewCell>
     </objects>
     <designables>
         <designable name="1W6-23-6Hw">
-            <size key="intrinsicContentSize" width="24" height="22"/>
+            <size key="intrinsicContentSize" width="70.5" height="59"/>
         </designable>
         <designable name="JuH-GY-jlI">
-            <size key="intrinsicContentSize" width="22.5" height="22"/>
+            <size key="intrinsicContentSize" width="66.5" height="54.5"/>
         </designable>
     </designables>
     <resources>
         <image name="briefcase.fill" catalog="system" width="128" height="105"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

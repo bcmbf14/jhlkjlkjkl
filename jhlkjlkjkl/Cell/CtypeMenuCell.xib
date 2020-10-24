@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CtypeMenuCell" rowHeight="161" id="KGk-i7-Jjw" customClass="CtypeMenuCell" customModule="jhlkjlkjkl" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="161"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="384" height="161"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHX-Ys-QtY" customClass="IconButton" customModule="jhlkjlkjkl" customModuleProvider="target">
+                        <rect key="frame" x="22" y="10" width="100" height="100"/>
+                        <color key="backgroundColor" red="1" green="0.99831159059999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="Iwl-8P-VCA"/>
+                            <constraint firstAttribute="width" constant="100" id="c59-a6-WgU"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal">
+                            <imageReference key="image" image="house.fill" catalog="system" renderingMode="original"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로토콜 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvZ-E0-sla">
+                        <rect key="frame" x="38.5" y="115" width="67" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTb-nh-Rhe" customClass="IconButton" customModule="jhlkjlkjkl" customModuleProvider="target">
+                        <rect key="frame" x="142" y="10" width="100" height="100"/>
+                        <color key="backgroundColor" red="1" green="0.99831159059999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="Z1D-3X-faz"/>
+                            <constraint firstAttribute="height" constant="100" id="bcj-Qv-j0a"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal">
+                            <imageReference key="image" image="house.fill" catalog="system" renderingMode="original"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1VB-wl-n7F" customClass="IconButton" customModule="jhlkjlkjkl" customModuleProvider="target">
+                        <rect key="frame" x="262" y="10" width="100" height="100"/>
+                        <color key="backgroundColor" red="1" green="0.99831159059999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="cBI-PK-fY2"/>
+                            <constraint firstAttribute="width" constant="100" id="pHv-7G-IH6"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal">
+                            <imageReference key="image" image="house.fill" catalog="system" renderingMode="original"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로토콜 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32x-3p-67P">
+                        <rect key="frame" x="278.5" y="115" width="67" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로토콜 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTh-w9-Wn6">
+                        <rect key="frame" x="158.5" y="115" width="67" height="25"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="32x-3p-67P" firstAttribute="centerX" secondItem="1VB-wl-n7F" secondAttribute="centerX" id="40S-jd-S1O"/>
+                    <constraint firstItem="ZTb-nh-Rhe" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="4cg-yi-n7h"/>
+                    <constraint firstItem="ZTb-nh-Rhe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="4v8-1m-68B"/>
+                    <constraint firstItem="qTh-w9-Wn6" firstAttribute="top" secondItem="ZTb-nh-Rhe" secondAttribute="bottom" constant="5" id="8jD-Lx-2Ld"/>
+                    <constraint firstItem="mvZ-E0-sla" firstAttribute="top" secondItem="WHX-Ys-QtY" secondAttribute="bottom" constant="5" id="90a-lP-zfa"/>
+                    <constraint firstItem="qTh-w9-Wn6" firstAttribute="centerX" secondItem="ZTb-nh-Rhe" secondAttribute="centerX" id="9eM-hU-QwI"/>
+                    <constraint firstItem="mvZ-E0-sla" firstAttribute="centerX" secondItem="WHX-Ys-QtY" secondAttribute="centerX" id="N7B-pI-r0j"/>
+                    <constraint firstItem="1VB-wl-n7F" firstAttribute="centerY" secondItem="ZTb-nh-Rhe" secondAttribute="centerY" id="cP5-0b-Cjf"/>
+                    <constraint firstItem="1VB-wl-n7F" firstAttribute="leading" secondItem="ZTb-nh-Rhe" secondAttribute="trailing" constant="20" id="ddn-bR-O9S"/>
+                    <constraint firstItem="ZTb-nh-Rhe" firstAttribute="leading" secondItem="WHX-Ys-QtY" secondAttribute="trailing" constant="20" id="lju-qB-srs"/>
+                    <constraint firstItem="32x-3p-67P" firstAttribute="top" secondItem="1VB-wl-n7F" secondAttribute="bottom" constant="5" id="pUq-ZG-1hu"/>
+                    <constraint firstItem="WHX-Ys-QtY" firstAttribute="centerY" secondItem="ZTb-nh-Rhe" secondAttribute="centerY" id="rYv-om-ctr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="button01" destination="WHX-Ys-QtY" id="nkM-2L-T4c"/>
+                <outlet property="button02" destination="ZTb-nh-Rhe" id="RC4-Rf-sEd"/>
+                <outlet property="button03" destination="1VB-wl-n7F" id="38L-d7-Fd2"/>
+                <outlet property="label1" destination="mvZ-E0-sla" id="8SC-lr-KLw"/>
+                <outlet property="label2" destination="qTh-w9-Wn6" id="6if-1o-TZ0"/>
+                <outlet property="label3" destination="32x-3p-67P" id="QmM-Kh-b6o"/>
+            </connections>
+            <point key="canvasLocation" x="102.89855072463769" y="112.83482142857142"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="1VB-wl-n7F">
+            <size key="intrinsicContentSize" width="70.5" height="59"/>
+        </designable>
+        <designable name="WHX-Ys-QtY">
+            <size key="intrinsicContentSize" width="70.5" height="59"/>
+        </designable>
+        <designable name="ZTb-nh-Rhe">
+            <size key="intrinsicContentSize" width="70.5" height="59"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+    </resources>
+</document>
