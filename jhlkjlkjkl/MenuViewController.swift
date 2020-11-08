@@ -9,6 +9,15 @@ import UIKit
 
 
 
+enum QType {
+    case Prefix
+    case Short
+    case Narrative
+}
+
+
+
+
 
 class MenuViewController: UIViewController {
     
@@ -17,28 +26,28 @@ class MenuViewController: UIViewController {
     
     let data = Array(1...10)
     
-    let menus = [
+    let menus: [[[(String, QType)]]] = [
         [
-            ["두음암기"],
-            ["보통암기","퀴즈암기"]
+            [("두음암기", .Prefix)],
+            [("보통암기", .Prefix),("퀴즈암기", .Prefix)]
         ],
         [
-            ["요구사항확인"],
-            ["데이터입출력\n구현","통합구현"],
-            ["서버프로그램\n구현", "인터페이스\n구현", "화면설계"],
-            ["애플리케이션\n테스트관리","SQL응용"],
-            ["소프트웨어개발\n보안구축"],
-            ["프로그래밍\n언어활용","응용SW기초\n기술활용"],
-            ["제품소프트웨어\n패키징"]
+            [("요구사항확인", .Short)],
+            [("데이터입출력\n구현", .Short),("통합구현", .Short)],
+            [("서버프로그램\n구현", .Short), ("인터페이스\n구현", .Short), ("화면설계", .Short)],
+            [("애플리케이션\n테스트관리", .Short),("SQL응용", .Short)],
+            [("소프트웨어개발\n보안구축", .Short)],
+            [("프로그래밍\n언어활용", .Short),("응용SW기초\n기술활용", .Short)],
+            [("제품소프트웨어\n패키징", .Short)]
         ],
         [
-            ["요구사항확인"],
-            ["데이터입출력\n구현","통합구현"],
-            ["서버프로그램\n구현", "인터페이스\n구현", "화면설계"],
-            ["애플리케이션\n테스트관리","SQL응용"],
-            ["소프트웨어개발\n보안구축"],
-            ["프로그래밍\n언어활용","응용SW기초\n기술활용"],
-            ["제품소프트웨어\n패키징"]
+            [("요구사항확인", .Narrative)],
+            [("데이터입출력\n구현", .Narrative),("통합구현", .Narrative)],
+            [("서버프로그램\n구현", .Narrative), ("인터페이스\n구현", .Narrative), ("화면설계", .Narrative)],
+            [("애플리케이션\n테스트관리", .Narrative),("SQL응용", .Narrative)],
+            [("소프트웨어개발\n보안구축", .Narrative)],
+            [("프로그래밍\n언어활용", .Narrative),("응용SW기초\n기술활용", .Narrative)],
+            [("제품소프트웨어\n패키징", .Narrative)]
         ]
     ]
     
@@ -61,7 +70,7 @@ class MenuViewController: UIViewController {
     
     
     
-    func alert(){
+    func alert(str: String, type: QType){
         let alert = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
         
         
@@ -80,6 +89,35 @@ class MenuViewController: UIViewController {
         
         
         let okAction = UIAlertAction(title: "학습하기", style: .destructive) { (_) in
+            
+            
+            print(str, type)
+            
+//            let purzleViewController = PurzleViewController()
+//            purzleViewController.modalTransitionStyle = .crossDissolve
+//            purzleViewController.modalPresentationStyle = .fullScreen
+//
+//            self.present(purzleViewController, animated: true) {
+//
+//            }
+            
+
+            
+
+
+
+            //            SecondViewController
+            //            ThirdViewController
+
+            let firstViewController = self.storyboard?.instantiateViewController(withIdentifier: "FirstViewController") as! FirstViewController
+            print(firstViewController, "Ffff")
+            firstViewController.modalTransitionStyle = .crossDissolve
+            firstViewController.modalPresentationStyle = .fullScreen
+            
+            self.present(firstViewController, animated: true) {
+                
+            }
+            
             
         }
         let calcelAction = UIAlertAction(title: "취소", style: .default) { (_) in
@@ -156,21 +194,20 @@ extension MenuViewController : UITableViewDelegate, UITableViewDataSource {
         cCell.selectionStyle = .none
         
         
-        
-        aCell.tapHandler = { bt in
-            self.alert()
+        aCell.tapHandler = { title, qType in
+            self.alert(str: title, type: qType)
             let indexPath = IndexPath(row: indexPath.row, section: indexPath.section)
             self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
         }
         
-        bCell.tapHandler = { bt in
-            self.alert()
+        bCell.tapHandler = { title, qType in
+            self.alert(str: title, type: qType)
             let indexPath = IndexPath(row: indexPath.row, section: indexPath.section)
             self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
         }
         
-        cCell.tapHandler = { bt in
-            self.alert()
+        cCell.tapHandler = { title, qType in
+            self.alert(str: title, type: qType)
             let indexPath = IndexPath(row: indexPath.row, section: indexPath.section)
             self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
         }
@@ -179,6 +216,10 @@ extension MenuViewController : UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
+            aCell.qtype = .Prefix
+            bCell.qtype = .Prefix
+            cCell.qtype = .Prefix
+            
             switch indexPath.row {
             case 0:
                 aCell.backgroundColor = .aquamarine
@@ -202,6 +243,12 @@ extension MenuViewController : UITableViewDelegate, UITableViewDataSource {
                 break
             }
         case 1:
+            
+            aCell.qtype = .Short
+            bCell.qtype = .Short
+            cCell.qtype = .Short
+            
+            
             switch indexPath.row {
             case 0:
                 aCell.backgroundColor = .aquamarine
@@ -282,6 +329,11 @@ extension MenuViewController : UITableViewDelegate, UITableViewDataSource {
                 break
             }
         case 2:
+            
+            aCell.qtype = .Narrative
+            bCell.qtype = .Narrative
+            cCell.qtype = .Narrative
+            
             switch indexPath.row {
             case 0:
                 aCell.backgroundColor = .aquamarine

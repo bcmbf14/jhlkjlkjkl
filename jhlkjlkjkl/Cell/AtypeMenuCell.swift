@@ -12,15 +12,17 @@ class AtypeMenuCell: UITableViewCell {
     static let identifier = "AtypeMenuCell"
 
     
-    var tapHandler: ((UIButton) -> Void)?
+    var tapHandler: ((String, QType) -> Void)?
 
+    var qtype = QType.Short
     
     @IBOutlet weak var button01: IconButton!
 
     @IBOutlet weak var label1: UILabel!
     
     @IBAction func tapped(_ sender: UIButton) {
-        tapHandler?(sender)
+        guard let title = label1.text else { return }
+        tapHandler?(title, qtype)
     }
     
 

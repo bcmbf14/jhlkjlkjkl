@@ -124,6 +124,10 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(appDelegate.tupleDict.count)
+        
+        
 
 //        ref = Database.database().reference()
 //

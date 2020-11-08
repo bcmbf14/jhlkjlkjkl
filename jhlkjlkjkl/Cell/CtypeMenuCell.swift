@@ -12,14 +12,27 @@ class CtypeMenuCell: UITableViewCell {
     
     static let identifier = "CtypeMenuCell"
 
+    var qtype = QType.Short
+
     
-    
-    var tapHandler: ((UIButton) -> Void)?
+    var tapHandler: ((String, QType) -> Void)?
 
     
     
-    @IBAction func tapped(_ sender: UIButton) {
-        tapHandler?(sender)
+    @IBAction func tapped(_ sender: UIButton) {        
+        switch sender {
+        case button01 :
+            guard let title = label1.text else { return }
+            tapHandler?(title, qtype)
+        case button02 :
+            guard let title = label2.text else { return }
+            tapHandler?(title, qtype)
+        case button03 :
+            guard let title = label3.text else { return }
+            tapHandler?(title, qtype)
+        default:
+            break
+        }
     }
     
     @IBOutlet weak var button01: UIButton!

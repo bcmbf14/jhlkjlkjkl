@@ -10,15 +10,25 @@ import UIKit
 class BtypeMenuCell: UITableViewCell {
     
     static let identifier = "BtypeMenuCell"
-
+    
+    var qtype = QType.Short
     
     
-    var tapHandler: ((UIButton) -> Void)?
-
+    var tapHandler: ((String, QType) -> Void)?
+    
     
     
     @IBAction func tapped(_ sender: UIButton) {
-        tapHandler?(sender)
+        switch sender {
+        case button01 :
+            guard let title = label1.text else { return }
+            tapHandler?(title, qtype)
+        case button02 :
+            guard let title = label2.text else { return }
+            tapHandler?(title, qtype)
+        default:
+            break
+        }
     }
     
     @IBOutlet weak var button01: UIButton!
@@ -26,7 +36,7 @@ class BtypeMenuCell: UITableViewCell {
     
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -50,7 +60,7 @@ class BtypeMenuCell: UITableViewCell {
             label.layer.masksToBounds = false
         }
         
-       
+        
         
         
         
@@ -59,10 +69,10 @@ class BtypeMenuCell: UITableViewCell {
         
         
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

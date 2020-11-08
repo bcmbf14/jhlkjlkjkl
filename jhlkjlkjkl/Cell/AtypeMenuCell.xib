@@ -58,7 +58,7 @@
     </objects>
     <designables>
         <designable name="okZ-PH-RQY">
-            <size key="intrinsicContentSize" width="24" height="22"/>
+            <size key="intrinsicContentSize" width="70" height="49"/>
         </designable>
     </designables>
     <resources>
