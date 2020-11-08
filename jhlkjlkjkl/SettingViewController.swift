@@ -18,6 +18,10 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
         tableView.separatorStyle = .none
         tableView.bounces = false
+        
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.largeContentTitle = "Setting"
     }
     
     
@@ -27,6 +31,14 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+   
+        
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

@@ -10,6 +10,8 @@ import UIKit
 
 extension UIColor {
     
+    class var logoColor: UIColor { return UIColor.init(hexString: "#78FFC8")}
+    
     class var aquamarine: UIColor { return UIColor.init(hexString: "#7FFFD4")}
     
     class var steelblue: UIColor { return UIColor.init(hexString: "#4682B4")}

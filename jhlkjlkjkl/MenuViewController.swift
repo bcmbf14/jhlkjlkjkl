@@ -51,6 +51,7 @@ class MenuViewController: UIViewController {
         
         tableView.bounces = false
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .aquamarine
         
         
         let headerNib = UINib.init(nibName: "MyHeaderView", bundle: Bundle.main)
@@ -119,6 +120,9 @@ extension MenuViewController : UITableViewDelegate, UITableViewDataSource {
         
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "MyHeaderView") as! MyHeaderView
         
+        
+        headerView.contentView.backgroundColor = .white
+//        headerView.headerLabel.backgroundColor = .clear
         
         if section == 0 {
             headerView.headerLabel.text = "   두음법칙   "

@@ -56,7 +56,7 @@ class IconButton: UIButton {
         
         
         self.layer.borderWidth = 5
-        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     
